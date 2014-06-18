@@ -8,6 +8,8 @@ import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
 
+import javax.net.ssl.HttpsURLConnection;
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -33,7 +35,7 @@ public class DownloaderActivity extends Activity
 			@Override
 			public void onClick(View v)
 			{
-				new DownloadData().execute("https://github.com/NelsonBrandao/TrafficSignsClassification/trafficSignz.xml");
+				new DownloadData().execute("https://raw.githubusercontent.com/NelsonBrandao/TrafficSignsClassification/master/trafficSignz.xml");
 			}
 		});
 		
@@ -86,6 +88,7 @@ public class DownloaderActivity extends Activity
             {
                 URL url = new URL(f_url[0]);
                 URLConnection connection = url.openConnection();
+//                HttpsURLConnection connection2 = url.op
                 connection.connect();
                 
                 int lenghtOfFile = connection.getContentLength();
