@@ -33,7 +33,7 @@ public class DownloaderActivity extends Activity
 			@Override
 			public void onClick(View v)
 			{
-				new DownloadData().execute("http://ogmalabs.com/trafficSignz.xml");
+				new DownloadData().execute("https://github.com/NelsonBrandao/TrafficSignsClassification/trafficSignz.xml");
 			}
 		});
 		
